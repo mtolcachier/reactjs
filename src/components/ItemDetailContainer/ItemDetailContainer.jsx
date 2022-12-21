@@ -1,11 +1,13 @@
 import React from 'react'
+import ItemListContainer from '../ItemListContainer/ItemListContainer'
 import { useParams } from 'react-router-dom'
 
 const ItemDetailContainer = (props) => {
     const {id} = useParams()
-    
+
     const {name,brand,src,price,details} = props
     console.log(props)
+    
 
     
     return (

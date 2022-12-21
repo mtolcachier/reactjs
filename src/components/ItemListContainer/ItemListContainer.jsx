@@ -120,30 +120,33 @@ const ItemListContainer = () => {
 
     const { category } = useParams();
     const filtered = category ? items.filter((item) => item.brand === category) : items;
+    console.log(filtered)
 
     return (
-    <div className="container-fluid text-center">
-        <div className="row">
-            <Carousel/>
-        </div>
-        <div className="row row-cols-1 row-cols-md-4 g-4 my-5 justify-content-between">
-            {filtered.map(({ id, name, brand, src, price, category, women, men, details }) => (
-                    <Item
-                    key={id}
-                    id={id}
-                    brand={brand}
-                    name={name}
-                    src={src}
-                    price={price}
-                    category={category}
-                    women={women}
-                    men={men}
-                    details={details}
-                    />
-                )
-            )}
-        </div>
-    </div>
+        <>
+            <div className="container-fluid text-center">
+                <div className="row">
+                    <Carousel/>
+                </div>
+                <div className="row row-cols-1 row-cols-md-4 g-4 my-5 justify-content-between">
+                    {filtered && filtered.map(({ id, name, brand, src, price, category, women, men, details }) => (
+                            <Item
+                            key={id}
+                            id={id}
+                            brand={brand}
+                            name={name}
+                            src={src}
+                            price={price}
+                            category={category}
+                            women={women}
+                            men={men}
+                            details={details}
+                            />
+                        )
+                    )}
+                </div>
+            </div>
+    </>
     );
 };
 
