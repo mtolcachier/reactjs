@@ -1,0 +1,8 @@
+#carouselExampleIndicators .carousel-inner img {
+    object-fit: cover;
+    object-position: center;
+    height: 65vh;
+    overflow: hidden;
+    margin-top: 0;
+    padding-top: 0;
+}

@@ -1,0 +1,9 @@
+.categories .navbar-nav .nav-item .nav-link {
+    color: white;
+    padding: 0;
+}
+
+.categories .navbar-nav .nav-item .nav-link:hover {
+    background-color: white;
+    color: black;
+}
