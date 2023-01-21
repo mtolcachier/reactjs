@@ -1,21 +1,24 @@
 import React from "react";
-import './Item.css'
 import { Link } from "react-router-dom";
 
-const Item = (props) => {
-    const { id, name, src, price } = props;
+const Item = ({product: {img1,id,price,brand,category}}) => {
     return (
-        <Link key={id} to={`/item/detail/${id}`} className="group col text-black">
-            <div className="card mx-auto h-100" style={{width: "18rem"}}>
-                <div>
-                    <img src={src} className="card-img-top" alt={name} />
-                </div>
+        <div className="col px-5 py-4">
+            <div className="card text-bg-dark h-100">
+                <img src={img1} className="card-img-top" alt={id}/>
                 <div className="card-body">
-                    <h5 className="card-title">{name}</h5>
-                    <p className="card-text">U$D {price}</p>
+                    <h5 className="card-title">{id}</h5>
+                    <div className="card-text">
+                        <p className="text-secondary">brand: {brand} </p>
+                        <p className="text-secondary">category: {category} </p>
+                        <p>USD {price}</p>
+                    </div>
                 </div>
+                <div className="card-footer mb-2">
+                        <Link to={`/item-detail/${id}`} className="btn btn-light ">See More Details</Link>
+                    </div>
             </div>
-        </Link>
+        </div>
     );
 };
 

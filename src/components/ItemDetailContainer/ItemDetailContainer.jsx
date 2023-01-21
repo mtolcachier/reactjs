@@ -1,29 +1,23 @@
-import React from 'react'
-import ItemListContainer from '../ItemListContainer/ItemListContainer'
+import React, {useEffect} from 'react'
 import { useParams } from 'react-router-dom'
+import useFirebase from '../../hook/useFirebase'
+import ItemDetail from '../ItemDetail/ItemDetail'
+import Loading from '../Loading/Loading'
 
-const ItemDetailContainer = (props) => {
+const ItemDetailContainer = () => {
+
     const {id} = useParams()
 
-    const {name,brand,src,price,details} = props
-    console.log(props)
-    
+    const {getProduct,product, isLoading} = useFirebase()
 
-    
+    useEffect(() => {
+        getProduct({id})
+        // eslint-disable-next-line
+    }, [])
+
     return (
         <div className='container-fluid'>
-            <div key={id} className='row'>
-                <div className='col' id={id}>
-                    <img src={src} alt={name} />
-                </div>
-                <div>
-                    <h1>{name} </h1>
-                    <span>{brand} </span>
-                    <span>${price}</span>
-                    <p>{details} </p>
-                </div>
-            </div>
-            <div>Hola</div>
+            {isLoading ? <Loading/> : product && <ItemDetail product={product} /> }
         </div>
     )
 }

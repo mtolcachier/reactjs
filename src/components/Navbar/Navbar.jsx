@@ -1,16 +1,17 @@
 import React from "react";
 import CartWidget from "../CartWidget/CartWidget";
-import './Navbar.css'
+import Logo from "./logo.png"
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
+
     return (
         <header>
-            <nav className="navbar navbar-expand-lg bg-black w-100">
+            <nav className="navbar navbar-expand-lg bg-dark bg-gradient w-100" data-bs-theme="dark">
                 <div className="container-fluid">
                 <NavLink className="navbar-brand" to="/">
-                    <div>
-                        <img src="./logo.png" alt="Logo" title="Logo" width="100px" />
+                    <div className="ps-2">
+                        <img src={Logo}alt="Logo" title="Logo" width="60px"/>
                     </div>
                 </NavLink>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" >
@@ -20,33 +21,23 @@ const Navbar = () => {
                     <div className="categories">
                         <ul className="navbar-nav mb-lg-0">
                             <li className="nav-item">
-                                <NavLink className="nav-link mx-4" to='/' >
+                                <NavLink className="nav-link mx-4 text-white" to='/' >
                                     All
                                 </NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className="nav-link mx-4" to="category/adidas">
-                                    Adidas
+                                <NavLink className="nav-link mx-4 text-white" to="category/sticks">
+                                    Sticks
                                 </NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className="nav-link mx-4" to="category/nike">
-                                    Nike
+                                <NavLink className="nav-link mx-4 text-white" to="category/protectives">
+                                    Protectives
                                 </NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className="nav-link mx-4" to="category/reebok">
-                                    Reebok
-                                </NavLink>
-                            </li>
-                            <li className="nav-item">
-                                <NavLink className="nav-link mx-4" to="category/puma">
-                                    Puma
-                                </NavLink>
-                            </li>
-                            <li className="nav-item">
-                                <NavLink className="nav-link mx-4" to="category/converse">
-                                    Converse
+                                <NavLink className="nav-link mx-4 text-white" to="category/accessories">
+                                    Accessories
                                 </NavLink>
                             </li>
                         </ul>

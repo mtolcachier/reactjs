@@ -1,9 +1,0 @@
-.title {
-    text-align: center;
-    text-shadow: 2px 2px 4px transparent;
-    transition: text-shadow .5s ease-in-out;
-}
-
-.title:hover {
-    text-shadow: 2px 2px 4px #5e5757;
-}
