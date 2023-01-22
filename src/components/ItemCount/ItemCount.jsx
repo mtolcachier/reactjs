@@ -5,7 +5,6 @@ const ItemCount = ({onAdd}) => {
 
     const {count,increase,decrease} = useCount()
 
-
     return (
         <div>
             <div className='row align-items-center px-3 text-center'>

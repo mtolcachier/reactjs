@@ -3,8 +3,9 @@ import React from "react";
 const CartItem = ({ product, deleteItem }) => {
     const unitPrice = product.item.price;
     const totalItemPrice = unitPrice * product.count;
+
     return (
-        <div className="row border border-secondary align-items-center py-3">
+        <div className="row row-cols-1 row-cols-sm-2 row-cols-xl-4 border border-secondary align-items-center py-3">
             <div className="col">
                 <img
                 className="d-flex mx-auto"

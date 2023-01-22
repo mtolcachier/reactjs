@@ -7,7 +7,7 @@ const Item = ({product: {img1,id,price,brand,category}}) => {
             <div className="card text-bg-dark h-100">
                 <img src={img1} className="card-img-top" alt={id} />
                 <div className="card-body">
-                    <h5 className="card-title">{id}</h5>
+                    <h5 className="card-title fs-6">{id}</h5>
                     <div className="card-text">
                         <p className="text-secondary">brand: {brand} </p>
                         <p className="text-secondary">category: {category} </p>
