@@ -7,7 +7,7 @@ const Navbar = () => {
 
     return (
         <header>
-            <nav className="navbar navbar-expand-lg bg-dark bg-gradient w-100" data-bs-theme="dark">
+            <nav className="navbar navbar-expand-lg bg-black border-bottom border-white w-100" data-bs-theme="dark">
                 <div className="container-fluid">
                 <NavLink className="navbar-brand" to="/">
                     <div className="ps-2">

@@ -8,6 +8,10 @@ html,body {
   text-transform: uppercase;
 }
 
+body {
+  height: 100vh
+}
+
 a {
   text-decoration: none;
   color: black;

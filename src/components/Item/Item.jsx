@@ -5,7 +5,7 @@ const Item = ({product: {img1,id,price,brand,category}}) => {
     return (
         <div className="col px-5 py-4">
             <div className="card text-bg-dark h-100">
-                <img src={img1} className="card-img-top" alt={id}/>
+                <img src={img1} className="card-img-top" alt={id} />
                 <div className="card-body">
                     <h5 className="card-title">{id}</h5>
                     <div className="card-text">

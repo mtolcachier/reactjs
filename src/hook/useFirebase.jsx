@@ -5,7 +5,6 @@ import { collection, getDocs, doc, getDoc } from "firebase/firestore";
 const useFirebase = () => {
     const [products, setProducts] = useState([]);
     const [product, setProduct] = useState({});
-
     const [isLoading, setIsLoading] = useState(true);
 
     const getProducts = async () => {

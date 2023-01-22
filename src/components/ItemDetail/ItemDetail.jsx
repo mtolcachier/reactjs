@@ -1,9 +1,9 @@
 import React from "react";
+import ItemCount from "../ItemCount/ItemCount";
 
-const ItemDetail = ({
-    product: { name, brand, price, img1, description, category },
-    }) => {
+const ItemDetail = ({product, onAdd}) => {
 
+    const { name, brand, price, img1, description, category } = product
 
     return (
         <div className="row px-4 py-5">
@@ -21,7 +21,7 @@ const ItemDetail = ({
                                     {description}
                                 </p>
                                 <p className="fs-4">USD {price} </p>
-                                <p className="card-text">ADD BUTTON</p>
+                                <ItemCount product={product} onAdd={onAdd} />
                             </div>
                         </div>
                     </div>

@@ -6,7 +6,7 @@ const Loading = () => {
             <span className='fs-1 fw-bolder'>Loading... </span>
             <div className="spinner-border text-light" role="status"></div>
         </div>
-  )
+    )
 }
 
 export default Loading
