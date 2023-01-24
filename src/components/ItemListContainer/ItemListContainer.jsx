@@ -19,7 +19,7 @@ const ItemListContainer = ({ greeting }) => {
 
     return (
         <>
-        {isLoading ? <Loading/> : 
+        {isLoading ? <Loading/> : products &&
             <div className="container-fluid text-center py-5">
                 {greeting &&  <h1>{greeting}</h1>}
                 <ItemList products={filtered} />

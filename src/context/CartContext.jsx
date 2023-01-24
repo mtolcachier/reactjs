@@ -49,8 +49,10 @@ const CartProvider = ({children}) => {
 
     const isInCart = (name) => {return cartArray.some(((element) => element.item.name === name))}
 
+    const clearCart = () => {setCartArray([]);setProductCount(0)}
+
     return (
-        <CartContext.Provider value={{cartArray, addToCart, deleteItem, productCount,totalPrice}}>
+        <CartContext.Provider value={{cartArray, addToCart, deleteItem, productCount,totalPrice, clearCart}}>
             {children}
         </CartContext.Provider>
     )

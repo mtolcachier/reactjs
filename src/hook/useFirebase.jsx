@@ -1,6 +1,7 @@
 import { db } from "../firebase";
 import { useState } from "react";
-import { collection, getDocs, doc, getDoc } from "firebase/firestore";
+import { collection, getDocs, doc, getDoc, addDoc } from "firebase/firestore";
+import Swal from "sweetalert2";
 
 const useFirebase = () => {
     const [products, setProducts] = useState([]);
@@ -36,12 +37,29 @@ const useFirebase = () => {
         }
     };
 
+    const sendOrder = async ({info}) => {
+        try {
+            const col = collection(db,"orders")
+            const order =  await addDoc(col,info)
+            console.log(order.id)
+            return (
+                Swal.fire({
+                    title: "Thank you for shopping!",
+                    text: `You order is ${order.id}`,
+                    icon: "success",
+                }))
+        } catch (error) {
+            console.log(error)
+    }
+}
+
     return { 
         products,
         getProducts,
         isLoading,
         product,
-        getProduct
+        getProduct,
+        sendOrder
     };
 };
 
