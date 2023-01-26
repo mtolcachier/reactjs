@@ -48,7 +48,9 @@ const CartForm = () => {
             return;
         }
         sendOrder({info: buyerInfo})
-        clearCart()
+        setTimeout(() => {
+            clearCart()
+        }, 4000);
     };
 
     return (

@@ -2,12 +2,13 @@ import React from "react";
 import CartWidget from "../CartWidget/CartWidget";
 import Logo from "./logo.png"
 import { NavLink } from "react-router-dom";
+import './Navbar.css'
 
 const Navbar = () => {
 
     return (
         <header>
-            <nav className="navbar navbar-dark navbar-expand-lg bg-black border-bottom border-white w-100" data-bs-theme="dark">
+            <nav className="navbar navbar-dark navbar-expand-lg bg-black w-100" data-bs-theme="dark">
                 <div className="container-fluid">
                 <NavLink className="navbar-brand" to="/">
                     <div className="ps-2">
@@ -21,22 +22,22 @@ const Navbar = () => {
                     <div className="categories">
                         <ul className="navbar-nav mb-lg-0">
                             <li className="nav-item">
-                                <NavLink className="nav-link mx-4 text-white" to='/' >
+                                <NavLink className="nav-link mx-4" to='/' >
                                     All
                                 </NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className="nav-link mx-4 text-white" to="category/sticks">
+                                <NavLink className="nav-link mx-4" to="category/sticks">
                                     Sticks
                                 </NavLink>
                             </li>
-                            <li className="nav-item">
-                                <NavLink className="nav-link mx-4 text-white" to="category/protectives">
+                            <li className="nav-item ">
+                                <NavLink className="nav-link mx-4" to="category/protectives">
                                     Protectives
                                 </NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className="nav-link mx-4 text-white" to="category/accessories">
+                                <NavLink className="nav-link mx-4" to="category/accessories">
                                     Accessories
                                 </NavLink>
                             </li>
